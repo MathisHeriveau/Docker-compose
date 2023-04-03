@@ -1,1 +1,40 @@
-<p>rapport works!</p>
+<app-header *ngIf="idrapport != undefined"></app-header>
+
+<div class="rapport" >
+
+  <div class="rapport__header">
+    <div class="rapport__header__logo">
+      <img src="assets/logo.png" alt="logo">
+    </div>
+    <div class="rapport__header__info">
+      <h1>Rapport d'intervention</h1>
+      <p>Technicien : {{unrapport.nomTechnicien}}</p>
+      <p>Date : {{unrapport.dateIntervention}}</p>
+    </div>
+  </div>
+
+  <div class="rapport__body">
+    <div class="rapport__body__client">
+      <h2>Client</h2>
+      <p>{{unrapport.nomClient}}</p>
+      <p>{{unrapport.adresseClient}}</p>
+    </div>
+    <div class="rapport__body__chaudiere">
+      <h2>Chaudière</h2>
+      <p>Marque : {{unrapport.marqueChaudiere}}</p>
+      <p>Modèle : {{unrapport.modeleChaudiere}}</p>
+      <p>Numéro de série : {{unrapport.numeroSerie}}</p>
+      <p>Date de mise en service : {{unrapport.dateMiseEnService}}</p>
+    </div>
+    <div class="rapport__body__intervention">
+      <h2>Intervention</h2>
+      <p>{{unrapport.descriptionIntervention}}</p>
+    </div>
+    <div class="rapport__body__temps">
+      <h2>Temps passé</h2>
+      <p>{{unrapport.tempsPasse}} minutes</p>
+    </div>
+  </div>
+</div>
+
+

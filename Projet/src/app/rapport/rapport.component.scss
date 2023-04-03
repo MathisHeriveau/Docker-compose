@@ -1,0 +1,53 @@
+.rapport {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 30px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+
+    &__logo {
+      width: 30%;
+    }
+
+    &__info {
+      width: 65%;
+      text-align: right;
+
+      h1 {
+        font-size: 36px;
+        margin: 0;
+      }
+
+      p {
+        font-size: 18px;
+        margin: 5px 0;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    justify-content: space-between;
+
+    &__client,
+    &__chaudiere,
+    &__intervention,
+    &__temps {
+      width: 23%;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      margin: 5px 0;
+    }
+  }
+}

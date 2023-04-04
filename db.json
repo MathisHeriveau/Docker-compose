@@ -120,5 +120,46 @@
       "cover": "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/The_Beatles_i_H%C3%B6torgscity_1963.jpg/220px-The_Beatles_i_H%C3%B6torgscity_1963.jpg",
       "quantity": 1
     }
+  ],
+  "Rapport": [
+    {
+      "id": 1,
+      "nomTechnicien": "Doe Jean",
+      "nomClient": "Palmer Bob",
+      "adresseClient": "1 rue de la paix",
+      "marqueChaudiere": "Bosch",
+      "modeleChaudiere": "Bosch",
+      "dateMiseEnService": "17/03/2021",
+      "dateIntervention": "17/03/2021",
+      "numeroSerie": "123456789",
+      "descriptionIntervention": "Intervention sur chaudière à gaz",
+      "tempsPasse": 1
+    },
+    {
+      "id": 2,
+      "nomTechnicien": "Doe Jean",
+      "nomClient": "Bowie David",
+      "adresseClient": "9 Boulevard de la Liberté",
+      "marqueChaudiere": "Bosch",
+      "modeleChaudiere": "Bosch",
+      "dateMiseEnService": "20/12/2023",
+      "dateIntervention": "20/12/2023",
+      "numeroSerie": "123456789",
+      "descriptionIntervention": "Intervention sur chaudière à gaz",
+      "tempsPasse": 1
+    },
+    {
+      "id": 3,
+      "nomTechnicien": "Mathis",
+      "nomClient": "Tom",
+      "adresseClient": "19 Boulevard Jean Jaurès",
+      "marqueChaudiere": "Une chauchau",
+      "modeleChaudiere": "La chauchau de dudu",
+      "dateMiseEnService": "2023-04-14",
+      "dateIntervention": "2023-04-23",
+      "numeroSerie": "1872762",
+      "descriptionIntervention": "C'est chau comme chauchau",
+      "tempsPasse": 1
+    }
   ]
 }

@@ -10,7 +10,7 @@ export class HomeComponent {
 
   constructor(private router: Router) { }
 
-  goToCatalogue(): void {
+  goToRapport(): void {
     this.router.navigate(['ListeRapport']);
   }
 

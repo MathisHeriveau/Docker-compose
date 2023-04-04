@@ -1,1 +1,95 @@
-<p>new-rapport works!</p>
+<app-header></app-header>
+
+<div class="monForm">
+  <section class="subForm saisieForm">
+    <h1>Nouveau rapport</h1>
+    <form [formGroup]="formulaire">
+      <div class="form-group">
+        <label for="nomTechnicien">Nom du technicien</label>
+        <input type="text" class="form-control" id="nomTechnicien" formControlName="nomTechnicien" />
+      </div>
+      <div class="form-group">
+        <label for="dateIntervention">Date de l'intervention</label>
+        <input type="date" class="form-control" id="dateIntervention" formControlName="dateIntervention" />
+      </div>
+      <div class="form-group">
+        <label for="nomClient">Nom du client</label>
+        <input type="text" class="form-control" id="nomClient" formControlName="nomClient" />
+      </div>
+      <div class="form-group">
+        <label for="adresseClient">Adresse du client</label>
+        <input type="text" class="form-control" id="adresseClient" formControlName="adresseClient" />
+      </div>
+      <div class="form-group">
+        <label for="marqueChaudiere">Marque de la chaudière</label>
+        <input type="text" class="form-control" id="marqueChaudiere" formControlName="marqueChaudiere" />
+      </div>
+      <div class="form-group">
+        <label for="modeleChaudiere">Modèle de la chaudière</label>
+        <input type="text" class="form-control" id="modeleChaudiere" formControlName="modeleChaudiere" />
+      </div>
+      <div class="form-group">
+        <label for="numeroSerie">Numéro de série</label>
+        <input type="text" class="form-control" id="numeroSerie" formControlName="numeroSerie" />
+      </div>
+      <div class="form-group">
+        <label for="dateMiseEnService">Date de mise en service</label>
+        <input type="date" class="form-control" id="dateMiseEnService" formControlName="dateMiseEnService" />
+      </div>
+      <div class="form-group">
+        <label for="descriptionIntervention">Description de l'intervention</label>
+        <input type="text" class="form-control" id="descriptionIntervention" formControlName="descriptionIntervention" />
+      </div>
+      <div class="form-group">
+        <label for="tempsPasse">Temps passé</label>
+        <input type="number" class="form-control" id="tempsPasse" formControlName="tempsPasse" />
+      </div>
+      <div class="btn">
+        <button type="submit" (click)="addRapport()" >Ajouter</button>
+      </div>
+    </form>
+  </section>
+
+  <section class="vueRapport">
+    <h1>Visualise ton rapport</h1>
+    <div class="unRapport-card" >
+      <div class="artiste" *ngIf="currenRapport$ | async as unRapport">
+
+        <div class="rapport" >
+          <div class="rapport__header">
+            <div class="rapport__header__logo">
+              <img src="assets/logo.png" alt="logo">
+            </div>
+            <div class="rapport__header__info">
+              <h1>Rapport d'intervention</h1>
+              <p>Technicien : {{unRapport.nomTechnicien}}</p>
+              <p>Date : {{unRapport.dateIntervention}}</p>
+            </div>
+          </div>
+          <div class="rapport__body">
+            <div class="rapport__body__client">
+              <h2>Client</h2>
+              <p>{{unRapport.nomClient}}</p>
+              <p>{{unRapport.adresseClient}}</p>
+            </div>
+            <div class="rapport__body__chaudiere">
+              <h2>Chaudière</h2>
+              <p>Marque : {{unRapport.marqueChaudiere}}</p>
+              <p>Modèle : {{unRapport.modeleChaudiere}}</p>
+              <p>Numéro de série : {{unRapport.numeroSerie}}</p>
+              <p>Date de mise en service : {{unRapport.dateMiseEnService}}</p>
+            </div>
+            <div class="rapport__body__intervention">
+              <h2>Intervention</h2>
+              <p>{{unRapport.descriptionIntervention}}</p>
+            </div>
+            <div class="rapport__body__temps">
+              <h2>Temps passé</h2>
+              <p>{{unRapport.tempsPasse}} minutes</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

@@ -1,6 +1,10 @@
 <app-header></app-header>
 
 <div class="home">
-  <p>Vous avez un nouveau rapport de visite</p>
-  <button (click)="goToRapport()">Voir le rapport</button>
+  <div class="home__background"></div>
+  <div class="home__content">
+    <h1>Bienvenue sur notre site</h1>
+    <p>Nous sommes spécialisés dans les interventions sur chaudières</p>
+    <button class="home__button" (click)="goToRapport()">Voir le rapport d'intervention</button>
+  </div>
 </div>

@@ -2,6 +2,6 @@
 <app-header></app-header>
 <div id="list__rapport">
   <ng-container *ngFor="let rapport of listRapports$ | async">
-    <app-rapport [rapport]="rapport"></app-rapport>
+    <app-rapport [leRapport]="rapport"></app-rapport>
   </ng-container>
 </div>
